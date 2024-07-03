@@ -5,19 +5,23 @@ This application was built using [streamlit](https://streamlit.io/).
 
 ![wetbulb-warnings app demo](/media/app_sample.png)
 
+> [!NOTE]
+> This app is in development. Things may break when running.
+
 ## Contents
 1. [Installation](#installation)
 2. [About WBT](#about-wet-bulb-temperature-wbt)
 3. [References and data used](#sources-and-further-reading)
 4. [Upcoming features](#upcoming-features)
+5. [Customising this app locally](#developing-with-this-app)
 
 ## Installation
-Pull the latest Docker image:
+Pull the latest Docker image without building a container:
 ```bash
 docker image pull ptejasv/wetbulb-status:latest
 ```
 
-Run the image:
+Run the image to create a container (you can run this with or without pulling the image first):
 ```bash
 docker run -d -p 8501:8501 --name "wetbulb-warnings" ptejasv/wetbulb-status:latest
 ```
@@ -48,3 +52,15 @@ Stull, R. (2011). Wet-Bulb Temperature from Relative Humidity and Air Temperatur
 ## Upcoming features
 1. live deployment
 2. WBT across different areas of Singapore
+
+## Developing with this app
+You can use the [`docker-compose-dev.yaml`](https://github.com/ptejasv/wetbulb-warnings/blob/master/docker-compose-dev.yaml) file for rapid local development after cloning this repository. 
+
+Run the following command to create a new docker image with the name `wetbulb-status` and a container named `wetbulb-warnings`. 
+```bash
+docker compose -f docker-compose-dev.yaml up -d --build
+```
+
+The application will be available at `http://localhost:8501/`. This docker compose file includes a mount to the current directory so you can customise the [`wetbulb_warnings.py`](https://github.com/ptejasv/wetbulb-warnings/blob/master/src/wetbulb_warnings.py) file and see the changes live on port 8501 without rebuilding the image.
+
+If you would like to suggest improvements or changes to the application, feel free to make a pull request or raise an issue.

@@ -3,10 +3,10 @@ version: '3.7'
 services:
   app:
     build: ./
-    container_name: wetbulb-warnings-app
+    container_name: wetbulb-warnings
     command: streamlit run wetbulb_warnings.py
     volumes:
       - .:/app
     ports:
       - 8501:8501
-    image: wetbulb-warnings:latest
+    image: wetbulb-status:latest
