@@ -31,7 +31,7 @@ Access the local deployment on port 8501 via `http://localhost:8501/`.
 ## About Wet-Bulb Temperature (WBT)
 WBT is the lowest temperature that an environment can take after adjusting for evaporation. Since our sweat evaporates, it can be used as a measure of how cool the air surrounding our body can get after accounting for sweating. 
 
-Evaporation, and therefore sweat evaporation, is higher when relative humidity is low. This means that an area which is hotbut dry might be safer than an area that might be cooler but very humid because people in the hot, dry area can cool off better by sweating.
+Evaporation, and therefore sweat evaporation, is higher when relative humidity is low. This means that an area which is hot but dry might be safer than an area that might be cooler but very humid because people in the hot, dry area can cool off better by sweating.
 
 At high WBTs, the body finds it hard to avoid overheating, increasing the risk of [heat-related illnesses](http://www.weather.gov.sg/learn-heat-stress/).
 
