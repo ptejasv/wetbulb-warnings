@@ -6,3 +6,6 @@ port = 8501
 
 [runner]
 magicEnabled = false
+
+[client]
+toolbarMode = "viewer"
